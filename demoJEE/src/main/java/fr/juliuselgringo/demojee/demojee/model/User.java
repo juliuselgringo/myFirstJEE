@@ -4,7 +4,7 @@ public class User {
 
     private String firstName;
     private String lastName;
-    private int age;
+    private Integer age;
 
     public User(String firstName, String lastName, int age) {
         this.setFirstName(firstName);
@@ -28,11 +28,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

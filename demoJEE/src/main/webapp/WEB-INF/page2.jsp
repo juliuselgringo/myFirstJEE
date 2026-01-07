@@ -11,7 +11,11 @@
     <title>Page 2</title>
 </head>
 <body>
+    <jsp:include page="/assets/templateJsp/header.jsp" />
+
     <h1>${message}</h1>
     <h2>M. ${newUser.firstName} ${newUser.lastName} vous avez ${newUser.age}</h2>
+
+    <jsp:include page="/assets/templateJsp/footer.jsp" />
 </body>
 </html>
