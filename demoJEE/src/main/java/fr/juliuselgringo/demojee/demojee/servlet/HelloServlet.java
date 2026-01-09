@@ -1,4 +1,4 @@
-package fr.juliuselgringo.demojee.demojee;
+package fr.juliuselgringo.demojee.demojee.servlet;
 
 import java.io.*;
 

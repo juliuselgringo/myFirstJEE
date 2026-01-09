@@ -18,31 +18,57 @@
   </properties>
 
   <dependencies>
-<dependency>
-      <groupId>jakarta.servlet</groupId>
-      <artifactId>jakarta.servlet-api</artifactId>
-      <version>6.1.0</version>
-      <scope>provided</scope>
+    <dependency>
+          <groupId>jakarta.servlet</groupId>
+          <artifactId>jakarta.servlet-api</artifactId>
+          <version>6.1.0</version>
+          <scope>provided</scope>
     </dependency>
-<dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
+    <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter-api</artifactId>
+          <version>${junit.version}</version>
+          <scope>test</scope>
     </dependency>
+    <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>${junit.version}</version>
+    <scope>test</scope>
+    </dependency>
+
+      <!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api -->
       <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <version>${junit.version}</version>
-        <scope>test</scope>
-      </dependency>  </dependencies>
+          <groupId>jakarta.servlet.jsp.jstl</groupId>
+          <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+          <version>3.0.2</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.glassfish.web/jakarta.servlet.jsp.jstl -->
+      <dependency>
+          <groupId>org.glassfish.web</groupId>
+          <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+          <version>3.0.1</version>
+      </dependency>
+
+  </dependencies>
 
   <build>
     <plugins>
-<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.4.0</version>
-      </plugin>    </plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.0</version>
+            <configuration>
+                <webResources>
+                    <resource>
+                        <directory>src/main/webapp/META-INF</directory>
+                        <filtering>true</filtering>
+                        <targetPath>META-INF</targetPath>
+                    </resource>
+                </webResources>
+            </configuration>
+        </plugin>
+    </plugins>
   </build>
 </project>

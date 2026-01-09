@@ -1,14 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: DEV01
-  Date: 07/01/2026
-  Time: 08:53
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+
 <header>
     <nav>
-        <a href="<%= request.getContextPath() %>/accueil-servlet">Accueil</a>
-        <a href="<%= request.getContextPath() %>/hello-servlet">Résultat</a>
+        <a href="<c:url value="/accueil-servlet" />">Acceuil</a>
+        <a href="<c:url value="/hello-servlet" />">Résultat</a>
     </nav>
 </header>
