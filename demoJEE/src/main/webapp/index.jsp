@@ -17,8 +17,16 @@
     <input type="number" name="age" placeholder="age">
     <button type="submit">Valider</button>
   </form>
-
   <br/>
+  <div id="displayUser">
+    <c:forEach var="user" items="${requestScope.usersToDisplay}">
+      <ul>
+        <li>${user.firstName}</li>
+        <li>${user.lastName}</li>
+        <li>${user.age}</li>
+      </ul>
+    </c:forEach>
+  </div>
 
   <a href="<c:url value="/hello-servlet?lastName=Rousselot&firstName=Julien&age=45" />">Hello Servlet</a>
 
